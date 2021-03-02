@@ -45,7 +45,7 @@ Function.prototype.mycall = function (context) {
 // apply实现
 
 Function.prototype.myapply=function (context,arr) {
-    if (typeof context !=='function') {
+    if (typeof this !=='function') {
         throw new Error(`${this} must be function`)
     }
     context = context ? Object(context) : window; 
